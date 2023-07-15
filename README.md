@@ -4,7 +4,7 @@ Project:- Maggie Website UI
 This repository contains a clone of the Maggi Website created using technologies HTML and CSS. 
 
 # Deploy link
-     https://abhi9818-m.github.io/maggi_clone/index.html
+https://abhi9818-m.github.io/maggi_clone/index.html
 
 # CDN
 
@@ -16,12 +16,12 @@ This repository contains a clone of the Maggi Website created using technologies
     <script src="https://kit.fontawesome.com/e49327de27.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
 
-# Technologies used
+# Technologies_used
 
       HTML
       CSS
 
-# Tool used 
+# Tool_used 
 
     Remixon
     Font Awesome
@@ -29,7 +29,7 @@ This repository contains a clone of the Maggi Website created using technologies
     HTML 
     CSS
     
-# Additional Information
+# Additional_Information
 
 The project was tested on the following browsers:
     --> Google Chrome
