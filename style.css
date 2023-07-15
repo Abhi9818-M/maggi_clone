@@ -12,6 +12,9 @@ body{
     font-family: 'SansRegular',Arial ;
     margin: 0;
 }
+h1,h2,h3,h4{
+    color: #333;
+}
 button{
     cursor: pointer;
 }
@@ -50,9 +53,10 @@ button{
   
 
   /* ..........................sidebar ............................ */
-  
+
 .sidebar{
     background-color: white;
+    z-index: 4;
 }
 .sidebar-section{
     position: fixed;
@@ -123,20 +127,17 @@ button{
 .section1-img{
     width: 100%;
 }
-/* ..........................section2 ............................ */
-.section2{
+.section1-blur{
     position: absolute;
+    width: 100%;
     top: 0rem;
-    width: 90%;
-    padding: 120px 100px;
+    left: 0rem;
+    height: 100%;
+    background-image: linear-gradient(to bottom,rgba(36, 35, 35, 0.841),rgba(255,0,0,0), rgba(255,0,0,0) );
 }
-.section2-head{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+/* ..........................section2 ............................ */
+
+
 
 h1{
     align-items: center;
@@ -147,11 +148,7 @@ h1{
     display: flex;
     width: 510px;
 }
-.section2-form-input{
-    padding: 12px 55px;
-    border: none;
-    width: 23rem;
-}
+
 
 input:focus::placeholder {
     color: rgb(255, 255, 255);
@@ -167,20 +164,174 @@ input:focus::placeholder {
     color: black;
     font-size: 1.5rem;
 }
-.section2-heading{
-    margin-bottom: 4rem;
+
+
+
+@media (min-width: 320px) {
+    .section5-content{
+        position: absolute;
+        top: 2.5rem;
+        left: 5rem;
+    }
+    .section5-content h2{
+        font-size: 25px;
+        font-weight: 500;
+    }
+  }
+@media (min-width: 375px) {
+    .section5-content{
+        position: absolute;
+        top: 2rem;
+        left: 5rem;
+    }
+    .section5-content h2{
+        font-size: 25px;
+        font-weight: 500;
+    }
+  }
+@media (min-width: 425px) {
+    .section5-content{
+        position: absolute;
+        top: 2rem;
+        left: 5rem;
+    }
+    .section5-content h2{
+        font-size: 25px;
+        font-weight: 500;
+    }
+  }
+  
+@media (min-width: 768px) {
+    .section2{
+        position: absolute;
+        top: 0rem;
+        width: 90%;
+        padding: 25px 50px;
+    }
+    .section2-h1{
+        color: white;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1;
+    }
+    .section2-heading{
+        margin-bottom: 2rem;
+    }
+    .section2-buttons{
+        padding: 20px 10px;
+    }
+    .section2-button{
+        overflow-x: scroll;
+        overflow: hidden;
+       
+    }
+    .section2-form-input{
+        padding: 12px 55px;
+        border: none;
+        width: 23rem;
+        margin-left: 30px;
+    }
+    .section2-head{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-left: 40px;
+    }
+        
+  }
+  
+@media (min-width: 1024px) {
+    .section2{
+            position: absolute;
+            top: 0rem;
+            width: 90%;
+            padding: 40px 50px;
+        }
+        .section2-h1{
+            color: white;
+            font-weight: 500;
+            word-spacing: 18px;
+            font-size: 55px;
+        }
+        .section2-heading{
+            margin-bottom: 4rem;
+        }
+        .section2-form-input{
+            padding: 12px 55px;
+            border: none;
+            width: 23rem;
+            margin-left: 20px;
+        }
+        .section2-head{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
 }
-.section2-h1{
-    color: white;
-    font-weight: 500;
-    word-spacing: 18px;
+  
+@media (min-width: 1280px) {
+    .section2{
+        position: absolute;
+        top: 0rem;
+        width: 90%;
+        padding: 120px 100px;
+    }
+    .section2-h1{
+        color: white;
+        font-weight: 500;
+        word-spacing: 18px;
+    }
+    .section2-heading{
+        margin-bottom: 4rem;
+    }
+    .section2-form-input{
+        padding: 12px 55px;
+        border: none;
+        width: 23rem;
+        margin-left: 20px;
+    }
 }
+  
+ @media (min-width: 1536px) {
+    .section2{
+        position: absolute;
+        top: 0rem;
+        width: 90%;
+        padding: 120px 100px;
+    }
+    .section2-h1{
+        color: white;
+        font-weight: 500;
+        word-spacing: 18px;
+    }
+    .section2-heading{
+        margin-bottom: 4rem;
+    }
+    .section2-form-input{
+        padding: 12px 55px;
+        border: none;
+        width: 23rem;
+        margin-left: 20px;
+    }
+  }
+
+
 .section2-button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
     margin-top: 2rem;
+    
 }
 .section2-buttons{
     border: none;
-    padding: 15px 30px;
+    
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.79); 
     border-radius: 4px; 
@@ -202,7 +353,7 @@ input:focus::placeholder {
     background-color: #49a842;
     border-top-left-radius: 1.43rem;
     position: fixed;
-    top: 37rem;
+    top: 35rem;
     right: 0;
     padding: 6px 8px;
     z-index: 1;
@@ -226,16 +377,9 @@ input:focus::placeholder {
     margin-bottom: 70px;
     
 }
-.section3-heading{
-    margin-left: 72px;
-}
-.section3-h2{
-    font-size: ;
-    font-weight: ;
-}
-.section3-content-img{
-    cursor: pointer;
-}
+
+
+
 
 .section3-content{
     display: flex;
@@ -244,7 +388,7 @@ input:focus::placeholder {
     align-items: center;
    
     width: 100%;
-    margin-top: 50px;
+    margin-top: 15px;
     margin-bottom: 30px;
 }
 .section3-content-h3{
@@ -295,34 +439,47 @@ input:focus::placeholder {
     align-items: center;
 }
 
+@media (min-width: 768px) {
+    .section3-h2{
+        font-size: 37px;
+        font-weight: 500;
+    }
+    .section3-heading{
+        margin-left: 20px;
+    }
+    .section3-content-img{
+        cursor: pointer;
+        margin: 20px;
+    }
+  }
+  
+@media (min-width: 1024px) {
+    .section3-h2{
+        font-size: 40px;
+        font-weight: 500;
+    }
+    .section3-heading{
+        margin-left: 50px;
+    }
+    .section3-content-img{
+        cursor: pointer;
+        margin: 20px;
+    }
+}
 /* ..........................section4 ............................ */
 
-.section4{
-    margin: 0px 110px;
-    border: 3px solid #f0eeee;
-}
+
 .section4-head{
     display: flex;
     flex-wrap: wrap;
     
+    flex-direction: col;
     align-items: center;
+    width: 100%;
 
 }
-.section4-head img{
-    width: 560px;
-    cursor: pointer;
-}
-.section4-content{
-    display: flex;
-    flex-direction: column;
-    
-   
-    text-align: start;
-    padding-left: 70px;
-    width: 450px;
-    height: 300px;
 
-}
+
 .section4-content h2{
    
 }
@@ -346,7 +503,52 @@ input:focus::placeholder {
     justify-content: space-around;
     align-items: center;
 }
+@media (min-width: 768px) {
+    .section4-head img{
+        width: 560px;
+        cursor: pointer;
+    }
+    .section4{
+        padding: 0;
+        margin: 0 110px;
+        border: 3px solid #f0eeee;
+    }
+    .section4-content{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding-left: 70px;
+        width: 450px;
+        height: 300px;
+        margin-top: 50px;
+    
+    }
+  }
+  
+@media (min-width: 1024px) {
+    .section4{
+        padding: 0;
+        margin: 0 180px;
+        border: 3px solid #f0eeee;
+    }
 
+   
+}
+@media (min-width: 1440px) {
+    .section4{
+        padding: 0;
+     margin: 0 110px;
+        border: 3px solid #f0eeee;
+    }
+    .section4-content{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding-left: 70px;
+        width: 450px;
+        height: 300px;
+    } 
+}
 /* ..........................section5 ............................ */
 
 .section5{
@@ -358,12 +560,79 @@ input:focus::placeholder {
    position: absolute
     z-index: 2;
     width: 100%;
+    margin-bottom: 100px;
 }
-.section5-content{
-    position: absolute;
-    top: 8rem;
-    left: 8rem;
-}
+
+@media (min-width: 320px) {
+    .section5-content{
+        position: absolute;
+        top: 2.5rem;
+        left: 5rem;
+    }
+    .section5-content h2{
+        font-size: 25px;
+        font-weight: 500;
+    }
+  }
+@media (min-width: 375px) {
+    .section5-content{
+        position: absolute;
+        top: 2rem;
+        left: 5rem;
+    }
+    .section5-content h2{
+        font-size: 25px;
+        font-weight: 500;
+    }
+  }
+@media (min-width: 425px) {
+    .section5-content{
+        position: absolute;
+        top: 2rem;
+        left: 5rem;
+    }
+    .section5-content h2{
+        font-size: 25px;
+        font-weight: 500;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .section5-content{
+        position: absolute;
+        top: 2rem;
+        left: 5rem;
+    }
+    .section5-content h2{
+        font-size: 25px;
+        font-weight: 500;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section5-content{
+        position: absolute;
+        top: 4rem;
+        left: 5rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .section5-content{
+        position: absolute;
+        top: 8rem;
+        left: 8rem;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    .section5-content{
+        position: absolute;
+        top: 8rem;
+        left: 8rem;
+    }
+  }
+
 .section5-content h2{
     
 }
@@ -396,42 +665,26 @@ input:focus::placeholder {
 
 /* ..........................section6 ............................ */
 
-.section6{
-    margin: 80px 110px;
-    border: 3px solid #f0eeee;
-}
+
 .section6-head{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    
 }
 .section6-head img{
     width: 560px;
     cursor: pointer;
 }
 
-.section6-content{
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    padding-left: 70px;
-    width: 480px;
-    height: 300px;
 
-}
 .section6-content h2{
     font-size: 42px;
 }
 .section6-content h5{
     font-size: 1rem;
 }
-.section6-content p{
-    font-size: 1.2rem;
-    line-height: 1.4;
-    word-spacing: 10;
-    color: #999;
-    margin-top: 30px;
-}
+
 .section6-buttons{
     display: flex;
     justify-content: flex-start;
@@ -486,6 +739,72 @@ input:focus::placeholder {
     width: 250px;
     justify-content: space-between;
     align-items: center;
+}
+@media (min-width: 768px) {
+    .section6{
+        padding: 0;
+        margin: 0 110px;
+        border: 3px solid #f0eeee;
+        margin-bottom: 40px;
+    }
+    .section6-content{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding-left: 70px;
+        width: 450px;
+        height: 300px;
+        margin-top: 50px;
+    
+    }
+    
+    .section6-content p{
+        font-size: 1.2rem;
+        line-height: 1.4;
+        word-spacing: 10;
+        color: #999;
+        margin-top: 10px;
+    }
+  }
+  
+@media (min-width: 1024px) {
+    .section6{
+        padding: 0;
+        margin: 0 180px;
+        border: 3px solid #f0eeee;
+        margin-bottom: 100px;
+    }
+    .section6-content p{
+        font-size: 1.2rem;
+        line-height: 1.4;
+        word-spacing: 10;
+        color: #999;
+        margin-top: 10px;
+    }
+   
+}
+@media (min-width: 1440px) {
+    .section6{
+        padding: 0;
+     margin: 0 110px;
+        border: 3px solid #f0eeee;
+        margin-bottom: 100px;
+    }
+    .section6-content{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding-left: 70px;
+        width: 450px;
+        height: 300px;
+    } 
+    .section6-content p{
+        font-size: 1.2rem;
+        line-height: 1.4;
+        word-spacing: 10;
+        color: #999;
+        margin-top: 30px;
+    }
 }
 /* --------------------------------------- footer -------------------------------------- */
 
@@ -613,7 +932,7 @@ h1{
 }
     
       
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
     h1{
         font-size: 47px;
         line-height: 57px;
@@ -622,7 +941,7 @@ h1{
     }
     
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
     h1{
         font-size: 40px;
         line-height: 50px;
@@ -643,7 +962,7 @@ h1{
     }
     
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
     h2{
         font-size: 30px;
         line-height: 40px;
@@ -661,11 +980,11 @@ h1{
     }
     
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
     h3{
         font-size: 16px;
         line-height: 23px;
         font-weight: 400;
     }
     
-}
+} */
